@@ -85,6 +85,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -117,20 +118,13 @@ USE_TZ = True
 
 
 import os
-# # Define the URL to use when referring to static files
-# STATIC_URL = '/static/'
-
-# # Define the directory path where static files will be collected
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# # Additional directories to look for static files
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
