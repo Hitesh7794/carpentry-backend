@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s=gc)kedd&*+io(#se)e)=&_l3$7i1^^tpjept1w)a-0^&lkl9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -117,22 +117,21 @@ USE_TZ = True
 
 
 import os
-# Define the URL to use when referring to static files
-STATIC_URL = '/static/'
+# # Define the URL to use when referring to static files
+# STATIC_URL = '/static/'
 
-# Define the directory path where static files will be collected
+# # Define the directory path where static files will be collected
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# # Additional directories to look for static files
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Additional directories to look for static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
-# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'static')
-# # Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -156,8 +155,5 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
-import os
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEBUG = True
