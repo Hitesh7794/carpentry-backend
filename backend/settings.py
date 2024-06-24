@@ -77,10 +77,20 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'carpentry',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb://hiteshsharm7794:guruji7794@ac-khfyst9-shard-00-00.ejnwxod.mongodb.net:27017,ac-khfyst9-shard-00-01.ejnwxod.mongodb.net:27017,ac-khfyst9-shard-00-02.ejnwxod.mongodb.net:27017/?replicaSet=atlas-kzryfz-shard-0&ssl=true&authSource=admin'
+        }  
     }
 }
 
