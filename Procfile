@@ -1,1 +1,1 @@
-web: gunicorn YOUR_PROJECT.wsgi
+web: gunicorn backend.wsgi
